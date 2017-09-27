@@ -26,3 +26,23 @@ Before running the tests make sure you are serving the app via `ng serve`.
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+
+
+
+
+## View
+* See a list of all projects
+  * ProjectListComponent
+* Click on project to see project details
+  * ProjectDetailsComponent
+    * Project name
+    * Project manager(s)
+    * Description
+    * Money Goal
+    * Money Use
+    * Swag rewarded
+* Filter projects using pipes
+* Click a button in a project to fund it
+* Click button to add a new project
+* Full CRUD functionality

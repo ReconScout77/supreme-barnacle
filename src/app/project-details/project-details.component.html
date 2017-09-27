@@ -1,0 +1,13 @@
+<div *ngIf="projectToDisplay | async">
+  <div class="well">
+    <h2>{{(projectToDisplay | async).name}}, by {{(projectToDisplay | async).manager}}</h2>
+    <p>{{(projectToDisplay | async).description}}</p>
+    <h4>Goal: ${{(projectToDisplay | async).fundsGoal}}</h4>
+
+    <h5>{{(projectToDisplay | async).fundsUse}}</h5>
+
+
+    <p>Rewards: {{(projectToDisplay | async).rewards}}</p>
+  </div>
+
+</div>

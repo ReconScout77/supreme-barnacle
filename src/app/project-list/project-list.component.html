@@ -1,0 +1,14 @@
+<h2>Projects</h2>
+
+<select (change)="onChange($event.target.value)">
+  <option value="allProjects" selected="selected">All Projects</option>
+  <option value="cheap">Cheap</option>
+  <option value="medium">Medium</option>
+  <option value="expensive">Expensive</option>
+</select>
+
+<div *ngFor="let project of projects | async | fundGoal:filterByGoal" (click)="goToDetailPage(project)" class="panel panel-default">
+  <div class="panel-body">
+    <h3>{{project.name}} by {{project.manager}}</h3>
+  </div>
+</div>
