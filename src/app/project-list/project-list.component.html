@@ -7,8 +7,15 @@
   <option value="expensive">Expensive</option>
 </select>
 
-<div *ngFor="let project of projects | async | fundGoal:filterByGoal" (click)="goToDetailPage(project)" class="panel panel-default">
-  <div class="panel-body">
-    <h3>{{project.name}} by {{project.manager}}</h3>
+<div *ngFor="let project of projects | async | fundGoal:filterByGoal" (click)="goToDetailPage(project)" class="card">
+  <div class="card-block">
+    <h4 class="card-title">{{project.name}}
+      <button (click)="deleteProject(project)" class="btn btn-danger deleteProjectButton">X</button>
+    </h4>
+    <h6 class="card-subtitle mb-2 text-muted">{{project.manager}}
+    </h6>
+    <span class="fundsRaisedDisplay">${{project.fundsRaised}}/{{project.fundsGoal}}
+    </span>
   </div>
+
 </div>

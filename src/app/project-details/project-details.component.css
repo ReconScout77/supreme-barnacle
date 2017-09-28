@@ -1,0 +1,13 @@
+.contributionForm {
+  display: block;
+  text-align: center;
+  top: 50px;
+}
+
+.percentageComplete {
+  float: right;
+}
+
+.editButton {
+  float: right;
+}

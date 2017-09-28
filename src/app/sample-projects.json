@@ -4,7 +4,9 @@
     "description": "The 7th Continent is a cooperative game of adventure, exploration and survival, for 1 to 4 players, inspired by the adventure books where ”you are the hero“. It’s also, thanks to the support of over 12,000 backers, one of the biggest board game worlds ever created!",
     "fundsGoal": 40000,
     "fundsUse": "The cost of making this game is high, notably due to the quality of its components. Due to this a retail version of the game is almost unfeasible.",
-    "rewards": "Free upgrade pack."
+    "rewards": "Free upgrade pack.",
+    "fundsRaised": 1022,
+    "percentageComplete": 5
     },
 
     {
@@ -13,7 +15,9 @@
       "description": "Star Citizen is an upcoming massively multiplayer, space trading and combat video game for Microsoft Windows and Linux." ,
       "fundsGoal": 500000,
       "fundsUse": "The great news is that we’ve already raised enough money to ensure this project will happen! But we don’t want to stop there. We have a lot more we want to add to Star Citizen and we need your help to do it!",
-      "rewards": "Pick a free ship."
+      "rewards": "Pick a free ship.",
+      "fundsRaised": 499999,
+      "percentageComplete": 15
     },
 
     {
@@ -22,6 +26,8 @@
       "description": "The game will be a new approach to point-and-click adventures, filled with dark comedy, drama, weirdness, and an apocalypse in the suburbs. This is the first time we're making something set in the unified C&H Universe, so we're completely excited to be making this for you!" ,
       "fundsGoal": 300000,
       "fundsUse": "Pretty  much all game development!",
-      "rewards": "A cyanide pill and a little happiness."
+      "rewards": "A cyanide pill and a little happiness.",
+      "fundsRaised": 11333,
+      "percentageComplete": 55
   }]
 }

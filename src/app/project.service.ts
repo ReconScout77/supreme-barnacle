@@ -16,4 +16,19 @@ export class ProjectService {
   getProjectById(projectId: string) {
     return this.database.object('projects/' + projectId);
   }
+
+  addContribution(updatedFunds: number, goal: number, key: string) {
+    const projectEntryInFireBase = this.getProjectById(key);
+    projectEntryInFireBase.update({fundsRaised: updatedFunds});
+    projectEntryInFireBase.update({percentageComplete: ((updatedFunds / goal) * 100)});
+  }
+
+  addProjectToFirebase(newProject: Project) {
+    this.projects.push(newProject);
+  }
+
+  deleteProjectFromFirebase(deadProject) {
+    const projectEntryInFirebase = this.getProjectById(deadProject.$key);
+    projectEntryInFirebase.remove();
+  }
 }

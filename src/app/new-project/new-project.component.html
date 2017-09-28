@@ -1,0 +1,30 @@
+<div class="card">
+  <div class="card-block">
+    <h3>Add Project</h3>
+    <div class="form-group">
+      <label>Project Name:</label>
+      <input type="text" class="form-control" #name>
+    </div>
+    <div class="form-group">
+      <label>Project Manager:</label>
+      <input type="text" class="form-control" #manager>
+    </div>
+    <div class="form-group">
+      <label>Description:</label>
+      <textarea class="form-control" #description></textarea>
+    </div>
+    <div class="form-group">
+      <label>$$$ Goal:</label>
+      <input type="number" class="form-control" #goal>
+    </div>
+    <div class="form-group">
+      <label>$$$ Use:</label>
+      <input type="text" class="form-control" #use>
+    </div>
+    <div class="form-group">
+      <label>Rewards:</label>
+      <input type="text" class="form-control" #rewards>
+    </div>
+      <a routerLink=''><button (click)="addProject(name.value, manager.value, description.value, +goal.value, use.value, rewards.value)" class="btn btn-success btn-block">Submit</button></a>
+  </div>
+</div>

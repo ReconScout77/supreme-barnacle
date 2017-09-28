@@ -1,13 +1,59 @@
 <div *ngIf="projectToDisplay | async">
-  <div class="well">
-    <h2>{{(projectToDisplay | async).name}}, by {{(projectToDisplay | async).manager}}</h2>
-    <p>{{(projectToDisplay | async).description}}</p>
-    <h4>Goal: ${{(projectToDisplay | async).fundsGoal}}</h4>
+  <div class="card">
+    <div class="card-block">
+      <h2>{{name}}, by {{(projectToDisplay | async).manager}}</h2>
+      <p>{{(projectToDisplay | async).description}}</p>
+      <h4>Goal: ${{(projectToDisplay | async).fundsRaised}}/{{(projectToDisplay | async).fundsGoal}} <span class="percentageComplete">{{(projectToDisplay | async).percentageComplete | number :'1.0-1'}}%</span></h4>
 
-    <h5>{{(projectToDisplay | async).fundsUse}}</h5>
+      <h5>{{(projectToDisplay | async).fundsUse}}</h5>
 
+      <p>Rewards: {{(projectToDisplay | async).rewards}}</p>
+      <button class="btn btn-success" (click)="donationForm()">Contribute!</button>
+      <button (click)="editForm()" class="btn btn-warning editButton">Edit</button>
+    </div>
 
-    <p>Rewards: {{(projectToDisplay | async).rewards}}</p>
+  </div>
+
+</div>
+
+<div class="contributionForm" *ngIf="showDonationForm">
+  <label>Contribution:</label>
+  <input #fundsContributed type="number">
+  <button (click)="submitDonationForm(fundsContributed.value)" class="btn btn-success">Submit!</button>
+  <button (click)="closeDonationForm()" class="btn btn-danger">X</button>
+</div>
+
+<div *ngIf="showEditForm">
+  <div class="card">
+    <div class="card-block">
+      <h3>Edit Project</h3>
+      <div class="form-group">
+        <label>Project Name:</label>
+        <input [value]="name" (input)="name=$event.target.value" type="text" class="form-control">
+      </div>
+      <div class="form-group">
+        <label>Project Manager:</label>
+        <input [(ngModel)]="projectToDisplay.manager" type="text" class="form-control">
+      </div>
+      <div class="form-group">
+        <label>Description:</label>
+        <textarea [(ngModel)]="projectToDisplay.description" class="form-control"></textarea>
+      </div>
+      <div class="form-group">
+        <label>$$$ Goal:</label>
+        <input [(ngModel)]="projectToDisplay" type="number" class="form-control">
+      </div>
+      <div class="form-group">
+        <label>$$$ Use:</label>
+        <input [(ngModel)]="projectToDisplay.fundsUse" type="text" class="form-control">
+      </div>
+      <div class="form-group">
+        <label>Rewards:</label>
+        <input [(ngModel)]="projectToDisplay.rewards" type="text" class="form-control">
+      </div>
+        <a routerLink=''><button>Submit</button></a>
+
+    </div>
   </div>
 
 </div>

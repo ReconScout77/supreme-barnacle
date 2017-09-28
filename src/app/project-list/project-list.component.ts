@@ -13,7 +13,7 @@ import { Router } from '@angular/router';
 export class ProjectListComponent implements OnInit {
 
   projects: FirebaseListObservable<any[]>;
-  filterByGoal = "allProjects";
+  filterByGoal = 'allProjects';
 
   constructor(private router: Router, private projectService: ProjectService) { }
 
@@ -27,6 +27,10 @@ export class ProjectListComponent implements OnInit {
 
   onChange(fundsFilter) {
     this.filterByGoal = fundsFilter;
+  }
+
+  deleteProject(oldProject: Project) {
+    this.projectService.deleteProjectFromFirebase(oldProject);
   }
 
 }
